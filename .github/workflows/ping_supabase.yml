@@ -21,8 +21,8 @@ jobs:
 
       - name: Ping Supabase
         env:
-          SUPABASE_URL: ${{ https://viirazcljsfditxaanag.supabase.co }}
-          SUPABASE_KEY: ${{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZpaXJhemNsanNmZGl0eGFhbmFnIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MTQzNjQxNiwiZXhwIjoyMDg3MDEyNDE2fQ.M00j5fa_DuZdKY2EPIkyENvOQuCnlXxxeByFpo-JdxU}}
+          SUPABASE_URL: ${{ 'https://viirazcljsfditxaanag.supabase.co' }}
+          SUPABASE_KEY: ${{'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZpaXJhemNsanNmZGl0eGFhbmFnIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MTQzNjQxNiwiZXhwIjoyMDg3MDEyNDE2fQ.M00j5fa_DuZdKY2EPIkyENvOQuCnlXxxeByFpo-JdxU'}}
         run: |
           node -e "
           const { createClient } = require('@supabase/supabase-js');
