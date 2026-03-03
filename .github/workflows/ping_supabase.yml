@@ -2,7 +2,7 @@ name: Ping Supabase to Prevent Pausing
 
 on:
   schedule:
-    - cron: '0 9 * * 1,4' # Runs at 9:00 AM every Monday and Thursday
+    - cron: '0 9 * * 1,2,3,4' # Runs at 9:00 AM every Monday and Thursday
 
 jobs:
   ping:
@@ -21,7 +21,7 @@ jobs:
 
       - name: Ping Supabase
         env:
-          SUPABASE_URL: ${{ 'https://viirazcljsfditxaanag.supabase.co' }}
+          SUPABASE_URL: ${{'https://viirazcljsfditxaanag.supabase.co'}}
           SUPABASE_KEY: ${{'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZpaXJhemNsanNmZGl0eGFhbmFnIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MTQzNjQxNiwiZXhwIjoyMDg3MDEyNDE2fQ.M00j5fa_DuZdKY2EPIkyENvOQuCnlXxxeByFpo-JdxU'}}
         run: |
           node -e "
